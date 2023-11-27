@@ -71,7 +71,7 @@ private val binding: ActivityMainBinding by lazy{
                     binding.humidity.text = "$humidity %"
                     binding.windspeed.text = "$windspeed m/s"
                     binding.sunrise.text = "${time(sunRise)}"
-                    binding.sunset.text = "$sunSet"
+                    binding.sunset.text = "${time(sunSet)}"
                     binding.sea.text = "$seaLevel hPa"
                     binding.day.text = dayName(System.currentTimeMillis())
                     binding.date.text =date()
@@ -85,8 +85,6 @@ private val binding: ActivityMainBinding by lazy{
             override fun onFailure(call: Call<WeatherApp>, t: Throwable) {
                 TODO("Not yet implemented")
             }
-
-
         })
     }
 
